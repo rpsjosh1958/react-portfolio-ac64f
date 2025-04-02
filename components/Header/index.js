@@ -27,7 +27,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 {/* Circular Profile Picture */}
                 <div className="w-10 h-10 rounded-full overflow-hidden mr-3 border-2 border-gray-700">
                   <img 
-                    src="/images/profile.jpg" // Update this path
+                    src="/images/josh1.jpg" 
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />
@@ -47,7 +47,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   >
                     <img
                       className="h-6"
-                      src="/images/moon.svg" // Only moon icon since we're keeping dark mode
+                      src="/images/moon.svg" 
                     />
                   </Button>
                 )}
