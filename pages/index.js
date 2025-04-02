@@ -59,30 +59,44 @@ export default function Home() {
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
-      <div className="container mx-auto mb-10">
+      {/* Main container with proper mobile padding */}
+      <div className="container mx-auto mb-10 px-2 sm:px-4">
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
         
-        {/* Hero Section */}
+        {/* Hero Section - Improved mobile layout */}
         <div className="laptop:mt-20 mt-10 flex flex-col laptop:flex-row items-start justify-between">
-          <div className="mt-5 flex-1">
-            <h1 ref={textOne} className="text-3xl tablet:text-6xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
+          <div className="mt-5 flex-1 w-full">
+            <h1 
+              ref={textOne} 
+              className="text-4xl tablet:text-6xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 font-bold w-full"
+            >
               {data.headerTaglineOne}
             </h1>
-            <h1 ref={textTwo} className="text-3xl tablet:text-6xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5">
+            <h1 
+              ref={textTwo} 
+              className="text-4xl tablet:text-6xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 font-bold w-full"
+            >
               {data.headerTaglineTwo}
             </h1>
-            <h1 ref={textThree} className="text-3xl tablet:text-6xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5">
+            <h1 
+              ref={textThree} 
+              className="text-4xl tablet:text-6xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 font-bold w-full"
+            >
               {data.headerTaglineThree}
             </h1>
-            <h1 ref={textFour} className="text-3xl tablet:text-6xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5">
+            <h1 
+              ref={textFour} 
+              className="text-4xl tablet:text-6xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 font-bold w-full"
+            >
               {data.headerTaglineFour}
             </h1>
           </div>
-
-          <div className="w-40 h-40 right-0 laptop:w-80 laptop:h-80 rounded-full overflow-hidden border-2 border-gray-700 ml-10 flex-shrink-0 self-center laptop:self-start">
+          
+          {/* Profile image - centered on mobile */}
+          <div className="w-40 h-40 mx-auto laptop:mx-0 laptop:w-80 laptop:h-80 rounded-full overflow-hidden border-2 border-gray-700 mt-6 laptop:mt-0 laptop:ml-10 flex-shrink-0">
             <img 
               src="/images/josh2.jpg"
               alt="Profile"
@@ -91,14 +105,14 @@ export default function Home() {
           </div>
         </div>
 
-        <Socials className="mt-2 laptop:mt-5" />
+        <Socials className="mt-6 laptop:mt-5 flex justify-center laptop:justify-start" />
         
-        {/* Work Section */}
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold">Work.</h1>
+        {/* Work Section - Improved mobile layout */}
+        <div className="mt-10 laptop:mt-30 p-0" ref={workRef}>
+          <div className="flex flex-col laptop:flex-row justify-between items-center">
+            <h1 className="text-3xl laptop:text-2xl font-bold mb-4 laptop:mb-0">Work.</h1>
             {categories.length > 1 && (
-              <div className="flex space-x-2">
+              <div className="flex flex-wrap justify-center gap-2 w-full laptop:w-auto">
                 {categories.map(category => (
                   <button
                     key={category}
@@ -116,7 +130,7 @@ export default function Home() {
             )}
           </div>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-2">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-4">
             {data.projects
               .filter(p => activeCategory === "All" || p.category === activeCategory)
               .map((project) => (
@@ -131,14 +145,14 @@ export default function Home() {
               ))}
           </div>
         </div>
-
         
-
-        {/* Podcast Section */}
+        {/* Podcast Section - Centered on mobile */}
         {data.showPodcast && data.podcast?.episodes?.length > 0 && (
-          <div className="mt-20 p-2 laptop:p-0">
-            <h1 className="text-2xl font-bold">{data.podcast.title || "Podcast"}</h1>
-            <div className="mt-5 grid grid-cols-1 tablet:grid-cols-3 gap-6">
+          <div className="mt-20 p-0">
+            <h1 className="text-3xl laptop:text-2xl font-bold text-center laptop:text-left">
+              {data.podcast.title || "Podcast"}
+            </h1>
+            <div className="mt-5 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-6">
               {data.podcast.episodes.map(episode => (
                 <PodcastCard key={episode.id} {...episode} />
               ))}
@@ -146,10 +160,12 @@ export default function Home() {
           </div>
         )}
 
-        {/* Services Section */}
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl font-bold">What i do?</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
+        {/* Services Section - Improved mobile layout */}
+        <div className="mt-10 laptop:mt-30 p-0">
+          <h1 className="text-3xl laptop:text-2xl font-bold text-center laptop:text-left mb-6">
+            What I Do?
+          </h1>
+          <div className="grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service) => (
               <ServiceCard
                 key={service.id}
@@ -161,13 +177,16 @@ export default function Home() {
           </div>
         </div>
 
-        {/* About Section */}
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl font-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+        {/* About Section - Improved mobile layout */}
+        <div className="mt-10 laptop:mt-40 p-0" ref={aboutRef}>
+          <h1 className="text-3xl laptop:text-2xl font-bold text-center laptop:text-left mb-6">
+            About.
+          </h1>
+          <p className="text-xl laptop:text-2xl w-full text-center laptop:text-left">
             {data.aboutpara}
           </p>
         </div>
+
         <Footer />
       </div>
     </div>
