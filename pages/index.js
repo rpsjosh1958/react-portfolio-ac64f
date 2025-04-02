@@ -84,7 +84,7 @@ export default function Home() {
 
           <div className="w-40 h-40 right-0 laptop:w-80 laptop:h-80 rounded-full overflow-hidden border-2 border-gray-700 ml-10 flex-shrink-0 self-center laptop:self-start">
             <img 
-              src="/images/profile.png"
+              src="/images/josh2.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
             />
@@ -116,7 +116,7 @@ export default function Home() {
             )}
           </div>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-2">
             {data.projects
               .filter(p => activeCategory === "All" || p.category === activeCategory)
               .map((project) => (
@@ -148,7 +148,7 @@ export default function Home() {
 
         {/* Services Section */}
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl font-bold">Services.</h1>
+          <h1 className="tablet:m-10 text-2xl font-bold">What i do?</h1>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service) => (
               <ServiceCard

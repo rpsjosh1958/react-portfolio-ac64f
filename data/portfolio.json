@@ -2,7 +2,7 @@
     "name": "Josh",
     "headerTaglineOne": "Hello 👋 I'm Josh",
     "headerTaglineTwo": "- graphic designer",
-    "headerTaglineThree": "& developer from Accra",
+    "headerTaglineThree": "& developer from Accra,",
     "headerTaglineFour": "Ghana",
     "showCursor": true,
     "showBlog": true,
@@ -23,21 +23,111 @@
     "projects": [
       {
         "id": "1",
-        "title": "Project One Test",
-        "description": "Web Design",
-        "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "title": "RASCOM",
+        "description": "Web Design - WordPress + Divi",
+        "imageSrc": "/images/rascom ss.PNG",
         "url": "http://rascom.org/",
-        "category": "WordPress"
+        "category": "WordPress",
+        "action": "external"
       },
       {
         "id": "2",
-        "title": "Project Two Test",
-        "description": "Custom WooCommerce solution",
-        "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "title": "Methodist Church Ghana - NAD",
+        "description": "Web Design - WordPress + Divi",
+        "imageSrc": "/images/mcgss.PNG",
         "url": "http://mcgnad.org/",
-        "category": "WordPress"
+        "category": "WordPress",
+        "action": "external"
+      },
+      {
+        "id": "3",
+        "title": "Senarki Creations",
+        "description": "Web Design - WordPress + Divi",
+        "imageSrc": "/images/senarki ss.PNG",
+        "url": "http://senarkicreations.com/",
+        "category": "WordPress",
+        "action": "external"
+      },
+      {
+        "id": "4",
+        "title": "Customer Payment Web App",
+        "description": "React - Javascript, HTML, CSS",
+        "imageSrc": "",
+        "url": "https://github.com/rpsjosh1958/customer-payments-app",
+        "category": "React"
+      },
+      {
+        "id": "5",
+        "title": "KIOSK Management System",
+        "description": "React - Javascript, HTML, CSS (Tailwind)",
+        "imageSrc": "",
+        "category": "React"
+      },
+      {
+        "id": "6",
+        "title": "Biz360 Mobile App",
+        "description": "React Native (Expo) - Typescript",
+        "imageSrc": "/images/senarki ss.PNG",
+        "url": "http://senarkicreations.com/",
+        "category": "React Native"
+      },
+      {
+        "id": "2",
+        "title": "My Design Work",
+        "description": "Graphic Design Collection",
+        "imageSrc": "/images/pintss.PNG",
+        "url": "/designs",
+        "category": "Graphic Design",
+        "action": "page"
+      },
+      {
+        "id": "3",
+        "title": "Animation Reel",
+        "description": "Motion Graphics Collection",
+        "imageSrc": "/images/pint2.PNG", 
+        "url": "/animations",
+        "category": "Animation",
+        "action": "page"
       }
     ],
+
+    "designs": [
+    {
+      "id": "d1",
+      "title": "Brand Identity Package",
+      "type": "logo",
+      "images": [
+        "/images/designs/brand1-1.jpg",
+        "/images/designs/brand1-2.jpg"
+      ],
+      "description": "Complete branding for tech startup"
+    },
+    {
+      "id": "d2",
+      "title": "Marketing Collateral",
+      "type": "print",
+      "images": [
+        "/images/designs/marketing1.jpg",
+        "/images/designs/marketing2.jpg"
+      ],
+      "description": "Brochures and flyers"
+    }
+    ],
+
+    "animations": [
+        {
+        "id": "a1",
+        "title": "3D Product Animation",
+        "videos": [
+            {
+            "url": "/videos/animation1.mp4",
+            "thumbnail": "/images/animations/thumb1.jpg"
+            }
+        ],
+        "description": "Product showcase animation"
+        }
+    ],
+
   
     "podcast": {
       "title": "Design+Code Podcast",
@@ -74,7 +164,7 @@
     "services": [
       {
         "id": "1",
-        "title": "Art Direction",
+        "title": "Graphic Design",
         "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance.",
         "icon": "/icons/art-direction.svg" 
       }
