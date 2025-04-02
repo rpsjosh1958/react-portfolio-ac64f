@@ -23,26 +23,32 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
-                onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
-              >
-                {name}.
-              </h1>
+              <div className="flex items-center">
+                {/* Circular Profile Picture */}
+                <div className="w-10 h-10 rounded-full overflow-hidden mr-3 border-2 border-gray-700">
+                  <img 
+                    src="/images/profile.jpg" // Update this path
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h1
+                  onClick={() => router.push("/")}
+                  className="font-medium p-2 laptop:p-0 link"
+                >
+                  {name}.
+                </h1>
+              </div>
 
               <div className="flex items-center">
                 {data.darkMode && (
                   <Button
-                    onClick={() =>
-                      setTheme(theme === "dark" ? "light" : "dark")
-                    }
+                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                   >
                     <img
                       className="h-6"
-                      src={`/images/${
-                        theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`}
-                    ></img>
+                      src="/images/moon.svg" // Only moon icon since we're keeping dark mode
+                    />
                   </Button>
                 )}
 
@@ -69,11 +75,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
+                  <Button onClick={handleWorkScroll}>Projects</Button>
                   <Button onClick={handleAboutScroll}>About</Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
+                  
                   {showResume && (
                     <Button
                       onClick={() =>
