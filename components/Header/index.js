@@ -27,7 +27,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 {/* Circular Profile Picture */}
                 <div className="w-10 h-10 rounded-full overflow-hidden mr-3 border-2 border-gray-700">
                   <img 
-                    src="/images/josh1.jpg" 
+                    src="/images/josh1.jpg" // Update this path
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />
@@ -46,9 +46,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                   >
                     <img
-                      className="h-6"
-                      src="/images/moon.svg" 
-                    />
+                  className="h-6"
+                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                ></img>
                   </Button>
                 )}
 
