@@ -6,7 +6,7 @@
     "headerTaglineFour": "from Accra, Ghana",
     "showCursor": true,
     "showBlog": true,
-    "darkMode": true,
+    "darkMode": false,
     "showResume": true,
     "showPodcast": true, 
     
@@ -51,7 +51,7 @@
         "id": "4",
         "title": "Customer Payment Web App",
         "description": "React - Javascript, HTML, CSS",
-        "imageSrc": "",
+        "imageSrc": "/images/kiosk.jpg",
         "url": "https://github.com/rpsjosh1958/customer-payments-app",
         "category": "React"
       },
@@ -59,7 +59,8 @@
         "id": "5",
         "title": "KIOSK Management System",
         "description": "React - Javascript, HTML, CSS (Tailwind)",
-        "imageSrc": "",
+        "imageSrc": "/images/Screenshot (313).png",
+        "url": "https://github.com/rpsjosh1958/kiosk_management.git",
         "category": "React"
       },
       {
@@ -195,32 +196,19 @@
     "podcast": {
       "title": "Design+Code Podcast",
       "description": "Conversations about design and development",
-      "coverImage": "/images/podcast-cover.jpg",
+      "coverImage": "/images/podcast art.jpg",
+      "spotifyUrl": "https://open.spotify.com/show/2CC9k3Wkb36ttOmmFup38u?si=gpj9_VFET1GZeX0L8lyhyQ",
+      "appleUrl": "https://podcasts.apple.com/gh/podcast/rps-recap/id1657300696",
       "episodes": [
         {
           "id": "ep1",
-          "title": "Getting Started with Three.js",
-          "description": "Learn the basics of 3D animations on the web",
+          "title": "RPS RECAP",
+          "description": "Josh's weekly adventures as a young adult.",
           "date": "2023-10-15",
+          "img": "/images/podcast art.jpg",
           "duration": "32:18",
           "audioFile": "/audio/episode1.mp3"
-        },
-        {
-            "id": "ep2",
-            "title": "MMF",
-            "description": "Learn the basics of 3D animations on the web",
-            "date": "2023-10-15",
-            "duration": "32:18",
-            "audioFile": "/audio/episode1.mp3"
-          },
-          {
-            "id": "ep2",
-            "title": "Getting Started with Three.js",
-            "description": "Learn the basics of 3D animations on the web",
-            "date": "2023-10-15",
-            "duration": "32:18",
-            "audioFile": "/audio/episode1.mp3"
-          }
+        }
       ]
     },
   
@@ -228,12 +216,42 @@
       {
         "id": "1",
         "title": "Graphic Design",
-        "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance.",
+        "description": "I create bold and eye-catching visuals using Adobe Photoshop and Illustrator from logos to full brand kits. Whether it’s social media content, flyers, or visual storytelling, I blend creativity and precision to help your brand stand out.",
+        "icon": "/icons/art-direction.svg" 
+      },
+      {
+        "id": "2",
+        "title": "Web Design",
+        "description": "I build responsive and modern websites using WordPress - HTML, CSS, Tailwind, and Bootstrap. Every layout is designed with user experience in mind — clean, intuitive, and perfectly aligned with your brand’s look and feel.",
+        "icon": "/icons/art-direction.svg" 
+      },
+      {
+        "id": "3",
+        "title": "UI/UX",
+        "description": "I design seamless user experiences using Figma. From wireframes to high-fidelity interfaces, I focus on clarity, accessibility, and interaction — ensuring users enjoy every moment on your web or mobile app.",
+        "icon": "/icons/art-direction.svg" 
+      },
+      {
+        "id": "4",
+        "title": "Animation, Editing & Streaming",
+        "description": "I edit videos using CapCut and AfterEffects to create engaging social content, reels, promos, and recap videos. From subtle color grading to dynamic transitions and overlays, my edits bring out the best in your footage — and I can support live streaming setups too.",
+        "icon": "/icons/art-direction.svg" 
+      },
+      {
+        "id": "5",
+        "title": "Mobile App Development",
+        "description": "I build sleek and scalable mobile apps using React Native, TypeScript, and Expo. With a sharp eye for design and usability, I ensure your app is fast, functional, and works beautifully on both iOS and Android.",
+        "icon": "/icons/art-direction.svg" 
+      },
+      {
+        "id": "6",
+        "title": "Web App Development",
+        "description": "Using JavaScript, React, Next.js, and TypeScript, I develop web applications that are responsive, SEO-friendly, and scalable. With Tailwind or Bootstrap for styling and intuitive UI design, your app will not only work smoothly — it’ll look amazing too.",
         "icon": "/icons/art-direction.svg" 
       }
     ],
   
-    "aboutpara": "I'm a multidisciplinary designer and developer based in Accra, Ghana. I specialize in creating immersive digital experiences through thoughtful design and clean code.",
+    "aboutpara": "I'm a multidisciplinary designer and developer based in Accra, Ghana. I specialize in creating immersive digital experiences through thoughtful design and clean code. - i didn't type all that. that's not me.",
 
   
     "resume": {

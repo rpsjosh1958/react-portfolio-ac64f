@@ -9,6 +9,7 @@ export default function Designs() {
   const [selectedDesign, setSelectedDesign] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showTileModal, setShowTileModal] = useState(false);
+  const [showFullImageModal, setShowFullImageModal] = useState(false);
   const logoScrollRef = useRef(null);
   const flyerScrollRef = useRef(null);
   const generalScrollRef = useRef(null);
@@ -16,11 +17,13 @@ export default function Designs() {
   const handleDesignClick = (design) => {
     setSelectedDesign(design);
     setShowTileModal(true);
+    setCurrentImageIndex(0);
   };
 
   const handleImageClick = (index) => {
     setCurrentImageIndex(index);
     setShowTileModal(false);
+    setShowFullImageModal(true);
   };
 
   const nextImage = () => {
@@ -41,13 +44,13 @@ export default function Designs() {
   const generalDesigns = data.designs.filter(design => design.type === 'general');
 
   return (
-    <div className="container mx-auto mb-10 px-2 sm:px-4">
+    <div className="container mx-auto px-4 py-12 pr-1">
       <Head>
         <title>Graphic Design Portfolio | {data.name}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
       
       <Header />
       
@@ -55,7 +58,7 @@ export default function Designs() {
         <h1 className="text-4xl font-bold mb-8">Graphic Design Work</h1>
         
         {/* Main Gallery Sections - Now responsive */}
-        <div className="flex flex-row xl:flex-row lg:flex-row gap-8 mb-16">
+        <div className="flex flex-col lg:flex-row gap-8 mb-16">
           {/* Logo Designs Section */}
           <section className="w-full lg:w-1/3">
             <h2 className="text-2xl font-bold mb-6">Logo Designs</h2>
@@ -80,7 +83,7 @@ export default function Designs() {
                         />
                       </div>
                       <div className="p-6">
-                        <h3 className="text-xl font-semibold">{design.title}</h3>
+                        <h3 className="text-xl text-gray-600 dark:text-gray-400 font-semibold">{design.title}</h3>
                         <p className="text-gray-600 dark:text-gray-400 mt-2">{design.description}</p>
                       </div>
                     </div>
@@ -114,7 +117,7 @@ export default function Designs() {
                         />
                       </div>
                       <div className="p-6">
-                        <h3 className="text-xl font-semibold">{design.title}</h3>
+                        <h3 className="text-xl text-gray-600 font-semibold">{design.title}</h3>
                         <p className="text-gray-600 dark:text-gray-400 mt-2">{design.description}</p>
                       </div>
                     </div>
@@ -148,7 +151,7 @@ export default function Designs() {
                         />
                       </div>
                       <div className="p-6">
-                        <h3 className="text-xl font-semibold">{design.title}</h3>
+                        <h3 className="text-xl text-gray-600 font-semibold">{design.title}</h3>
                         <p className="text-gray-600 dark:text-gray-400 mt-2">{design.description}</p>
                       </div>
                     </div>
@@ -171,7 +174,7 @@ export default function Designs() {
                   ✕
                 </button>
                 
-                <h2 className="text-3xl font-bold mb-2 dark:text-white pr-10">{selectedDesign.title}</h2>
+                <h2 className="text-3xl text-gray-600 font-bold mb-2 dark:text-white pr-10">{selectedDesign.title}</h2>
                 <p className="text-gray-600 dark:text-gray-300">{selectedDesign.description}</p>
               </div>
               
@@ -202,21 +205,27 @@ export default function Designs() {
         )}
 
         {/* Full Image Modal */}
-        {selectedDesign && !showTileModal && (
+        {selectedDesign && showFullImageModal && (
           <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-6xl w-full relative">
-              <button 
-                onClick={() => setShowTileModal(true)}
-                className="absolute top-4 left-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-              >
-                ← Back to Gallery
-              </button>
-              <button 
-                onClick={() => setSelectedDesign(null)}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 text-2xl"
-              >
-                ✕
-              </button>
+            <button 
+              onClick={() => {
+                setShowTileModal(true);
+                setShowFullImageModal(false);
+              }}
+              className="text-gray-600 absolute top-4 left-4 ..."
+            >
+              ← Back to Gallery
+            </button>
+            <button 
+              onClick={() => {
+                setSelectedDesign(null);
+                setShowFullImageModal(false);
+              }}
+              className="absolute top-4 right-4 ..."
+            >
+              ✕
+            </button>
               
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2 dark:text-white">

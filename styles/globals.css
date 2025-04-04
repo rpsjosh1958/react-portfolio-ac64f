@@ -75,3 +75,30 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+  .podcast-gradient {
+    background: linear-gradient(135deg, 
+      rgba(99, 102, 241, 0.1) 0%, 
+      rgba(168, 85, 247, 0.1) 50%, 
+      rgba(236, 72, 153, 0.1) 100%);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .services-gradient {
+    background: linear-gradient(135deg, 
+      rgba(16, 185, 129, 0.1) 0%, 
+      rgba(5, 150, 105, 0.1) 50%, 
+      rgba(4, 120, 87, 0.1) 100%);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+  }
+  .bouncing-arrow {
+    animation: bounceX 1.5s infinite;
+  }
+  @keyframes bounceX {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+  }

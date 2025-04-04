@@ -3,14 +3,11 @@ import React from "react";
 const PodcastCard = ({ title, description, date, duration, coverImage }) => {
   return (
     <div className="overflow-hidden rounded-lg p-2 laptop:p-4 link">
-      <div
-        className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
-        style={{ height: "250px" }}
-      >
+      <div className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-[250px] laptop:h-[380px]">
         <img
           alt={title}
           className="h-full w-full object-cover hover:scale-110 transition-all ease-out duration-300"
-          src={coverImage || "/images/default-podcast.jpg"}
+          src={coverImage || "/images/podcast art.jpg"}
         />
       </div>
       <h1 className="mt-5 text-3xl font-medium">
